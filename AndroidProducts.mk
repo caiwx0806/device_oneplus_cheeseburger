@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_cheeseburger.mk
+    $(LOCAL_DIR)/rr_cheeseburger.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_cheeseburger-user \
-    derp_cheeseburger-userdebug \
-    derp_cheeseburger-eng
+    rr_cheeseburger-user \
+    rr_cheeseburger-userdebug \
+    rr_cheeseburger-eng

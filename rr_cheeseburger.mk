@@ -22,7 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
 # Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
+
+# Inherit some common Gapps.
+$(call inherit-product, vendor/gapps/config.mk)
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
@@ -31,7 +34,7 @@ IS_PHONE := true
 TARGET_MINIMAL_APPS := false
 TARGET_INCLUDE_STOCK_ARCORE := true
 
-PRODUCT_NAME := derp_cheeseburger
+PRODUCT_NAME := rr_cheeseburger
 PRODUCT_DEVICE := cheeseburger
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -51,9 +54,4 @@ BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.021/4565141:user/r
 
 TARGET_VENDOR := oneplus
 
-# Official-ify
-DERP_BUILDTYPE := Official
-
-# Device maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.derp.maintainer=David Setiawan
+TARGET_FACE_UNLOCK_SUPPORTED := true
