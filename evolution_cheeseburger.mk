@@ -22,14 +22,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
 # Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+$(call inherit-product, vendor/myapps/common.mk)
+
+# Inherit some common YAAP stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # GApps targets
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := yaap_cheeseburger
+PRODUCT_NAME := evolution_cheeseburger
 PRODUCT_DEVICE := cheeseburger
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
