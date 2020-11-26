@@ -44,5 +44,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.cheeseburger
 
+# Firmware
+$(call inherit-product-if-exists, vendor/oneplus/firmware/cheeseburger/firmware.mk)
+
 # Inherit from oneplus msm8998-common
 $(call inherit-product, device/oneplus/msm8998-common/common.mk)
